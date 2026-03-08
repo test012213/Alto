@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS Installers - Alto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="installers.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">Alto</a>
+            <ul class="nav-links">
+                <li><a href="index.html#laptops">Laptops</a></li>
+                <li><a href="index.html#os">AltoOS</a></li>
+                <li><a href="installers.html">OS Installers</a></li>
+                <li><a href="#" onclick="handleLogout()" class="login-btn" id="userBtn">Sign Out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="installers-container">
+        <div class="installers-header">
+            <h1>AltoOS Installers</h1>
+            <p>Download and install AltoOS on your Alto laptop</p>
+            <p class="user-welcome" id="welcomeMsg"></p>
+        </div>
+
+        <div class="installers-grid">
+            <div class="installer-card beta">
+                <div class="installer-header">
+                    <h3>AltoOS Sedona</h3>
+                    <span class="badge beta">Beta 3</span>
+                </div>
+                <p class="installer-year">2026</p>
+                <p class="installer-desc">The latest beta release with cutting-edge features. For early adopters and testers.</p>
+                <ul class="installer-features">
+                    <li>Enhanced security protocols</li>
+                    <li>New UI animations</li>
+                    <li>Improved battery optimization</li>
+                </ul>
+                <button class="download-btn" onclick="attemptDownload('Sedona')">
+                    <span class="btn-icon">⬇</span> Download Beta
+                </button>
+                <p class="installer-size">Size: 8.2 GB</p>
+            </div>
+
+            <div class="installer-card current">
+                <div class="installer-header">
+                    <h3>AltoOS Cedar</h3>
+                    <span class="badge current">Current Release</span>
+                </div>
+                <p class="installer-year">2024</p>
+                <p class="installer-desc">The stable and recommended version for all Alto laptops.</p>
+                <ul class="installer-features">
+                    <li>Rock-solid stability</li>
+                    <li>Full app compatibility</li>
+                    <li>Regular security updates</li>
+                </ul>
+                <button class="download-btn" onclick="attemptDownload('Cedar')">
+                    <span class="btn-icon">⬇</span> Download
+                </button>
+                <p class="installer-size">Size: 7.8 GB</p>
+            </div>
+
+            <div class="installer-card">
+                <div class="installer-header">
+                    <h3>AltoOS 10</h3>
+                    <span class="badge anniversary">10th Anniversary</span>
+                </div>
+                <p class="installer-year">2022</p>
+                <p class="installer-desc">Special anniversary edition celebrating 10 years of AltoOS.</p>
+                <ul class="installer-features">
+                    <li>Anniversary themes</li>
+                    <li>Classic features restored</li>
+                    <li>Long-term support</li>
+                </ul>
+                <button class="download-btn" onclick="attemptDownload('AltoOS 10')">
+                    <span class="btn-icon">⬇</span> Download
+                </button>
+                <p class="installer-size">Size: 7.5 GB</p>
+            </div>
+
+            <div class="installer-card">
+                <div class="installer-header">
+                    <h3>AltoOS Sierra</h3>
+                </div>
+                <p class="installer-year">2021</p>
+                <p class="installer-desc">Reliable and supported version for older Alto hardware.</p>
+                <ul class="installer-features">
+                    <li>Optimized performance</li>
+                    <li>Security updates</li>
+                    <li>Stable ecosystem</li>
+                </ul>
+                <button class="download-btn" onclick="attemptDownload('Sierra')">
+                    <span class="btn-icon">⬇</span> Download
+                </button>
+                <p class="installer-size">Size: 7.2 GB</p>
+            </div>
+
+            <div class="installer-card">
+                <div class="installer-header">
+                    <h3>AltoOS Redwood</h3>
+                </div>
+                <p class="installer-year">2018</p>
+                <p class="installer-desc">Mature and stable release with extended support.</p>
+                <ul class="installer-features">
+                    <li>Proven stability</li>
+                    <li>Wide compatibility</li>
+                    <li>Security patches</li>
+                </ul>
+                <button class="download-btn" onclick="attemptDownload('Redwood')">
+                    <span class="btn-icon">⬇</span> Download
+                </button>
+                <p class="installer-size">Size: 6.8 GB</p>
+            </div>
+
+            <div class="installer-card legacy">
+                <div class="installer-header">
+                    <h3>AltoOS Bluesky</h3>
+                    <span class="badge unsupported">Unsupported</span>
+                </div>
+                <p class="installer-year">2015</p>
+                <p class="installer-desc">Legacy version for recovery purposes only. No security updates.</p>
+                <ul class="installer-features">
+                    <li>Recovery tool only</li>
+                    <li>No support</li>
+                    <li>For old hardware</li>
+                </ul>
+                <button class="download-btn legacy-btn" onclick="attemptDownload('Bluesky')">
+                    <span class="btn-icon">⬇</span> Download Legacy
+                </button>
+                <p class="installer-size">Size: 5.9 GB</p>
+            </div>
+
+            <div class="installer-card legacy">
+                <div class="installer-header">
+                    <h3>AltoOS Vienna</h3>
+                    <span class="badge unsupported">Unsupported</span>
+                </div>
+                <p class="installer-year">2012</p>
+                <p class="installer-desc">Original AltoOS release. For recovery purposes only.</p>
+                <ul class="installer-features">
+                    <li>Recovery tool only</li>
+                    <li>No support</li>
+                    <li>Historical version</li>
+                </ul>
+                <button class="download-btn legacy-btn" onclick="attemptDownload('Vienna')">
+                    <span class="btn-icon">⬇</span> Download Legacy
+                </button>
+                <p class="installer-size">Size: 5.2 GB</p>
+            </div>
+        </div>
+
+        <div class="installation-guide">
+            <h2>Installation Guide</h2>
+            <div class="guide-steps">
+                <div class="guide-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Download</h4>
+                        <p>Select and download your desired AltoOS version</p>
+                    </div>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Create Bootable USB</h4>
+                        <p>Use Alto Recovery Assistant to create installation media</p>
+                    </div>
+                </div>
+                <div class="guide-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Install</h4>
+                        <p>Boot from USB and follow the on-screen instructions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Alto Inc. All rights reserved.</p>
+    </footer>
+
+    <script src="installers.js"></script>
+</body>
+</html>

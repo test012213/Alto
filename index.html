@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alto - Experience the Future</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Alto</div>
+            <ul class="nav-links">
+                <li><a href="#laptops">Laptops</a></li>
+                <li><a href="#os">AltoOS</a></li>
+                <li><a href="installers.html">OS Installers</a></li>
+                <li><a href="login.html" class="login-btn">Sign In</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1 class="hero-title">Alto.</h1>
+        <p class="hero-subtitle">Power. Performance. Perfection.</p>
+        <p class="hero-description">Experience the world's most advanced ARM-based laptops powered by AltoOS.</p>
+    </section>
+
+    <section id="laptops" class="laptops-section">
+        <div class="laptop-card" data-laptop="ultra">
+            <h2 class="laptop-title">Alto Ultra</h2>
+            <p class="laptop-tagline">The ultimate powerhouse.</p>
+            <div class="laptop-image-placeholder">
+                <div class="laptop-visual ultra"></div>
+            </div>
+            <button class="learn-more" onclick="showDetails('ultra')">Learn More</button>
+        </div>
+
+        <div class="laptop-card" data-laptop="pro">
+            <h2 class="laptop-title">Alto Pro</h2>
+            <p class="laptop-tagline">Professional grade performance.</p>
+            <div class="laptop-image-placeholder">
+                <div class="laptop-visual pro"></div>
+            </div>
+            <button class="learn-more" onclick="showDetails('pro')">Learn More</button>
+        </div>
+
+        <div class="laptop-card" data-laptop="alto1">
+            <h2 class="laptop-title">Alto 1</h2>
+            <p class="laptop-tagline">Perfectly balanced.</p>
+            <div class="laptop-image-placeholder">
+                <div class="laptop-visual alto1"></div>
+            </div>
+            <button class="learn-more" onclick="showDetails('alto1')">Learn More</button>
+        </div>
+
+        <div class="laptop-card" data-laptop="neo">
+            <h2 class="laptop-title">Alto Neo</h2>
+            <p class="laptop-tagline">Essential excellence.</p>
+            <div class="laptop-image-placeholder">
+                <div class="laptop-visual neo"></div>
+            </div>
+            <button class="learn-more" onclick="showDetails('neo')">Learn More</button>
+        </div>
+    </section>
+
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDetails()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <section id="os" class="os-section">
+        <h2 class="section-title">AltoOS</h2>
+        <p class="section-subtitle">Built from the ground up. Designed for Alto.</p>
+        
+        <div class="os-features">
+            <div class="feature">
+                <div class="feature-icon">🔒</div>
+                <h3>Ultra Secure</h3>
+                <p>Custom kernel architecture designed with security at its core.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <h3>Lightning Fast</h3>
+                <p>Optimized exclusively for Alto's custom ARM chips.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎨</div>
+                <h3>Beautiful Design</h3>
+                <p>Intuitive interface that feels natural and effortless.</p>
+            </div>
+        </div>
+
+        <div class="os-versions">
+            <h3 class="versions-title">AltoOS Versions</h3>
+            <div class="version-grid">
+                <div class="version-card supported">
+                    <h4>AltoOS Sedona</h4>
+                    <span class="badge beta">Beta 3</span>
+                    <p>2026 • Latest Beta</p>
+                </div>
+                <div class="version-card supported">
+                    <h4>AltoOS Cedar</h4>
+                    <span class="badge current">Current</span>
+                    <p>2024 • Supported</p>
+                </div>
+                <div class="version-card supported">
+                    <h4>AltoOS 10</h4>
+                    <span class="badge anniversary">10th Anniversary</span>
+                    <p>2022 • Supported</p>
+                </div>
+                <div class="version-card supported">
+                    <h4>AltoOS Sierra</h4>
+                    <p>2021 • Supported</p>
+                </div>
+                <div class="version-card supported">
+                    <h4>AltoOS Redwood</h4>
+                    <p>2018 • Supported</p>
+                </div>
+                <div class="version-card">
+                    <h4>AltoOS Bluesky</h4>
+                    <span class="badge unsupported">Unsupported</span>
+                    <p>2015 • Legacy</p>
+                </div>
+                <div class="version-card">
+                    <h4>AltoOS Vienna</h4>
+                    <span class="badge unsupported">Unsupported</span>
+                    <p>2012 • Legacy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Alto Inc. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
